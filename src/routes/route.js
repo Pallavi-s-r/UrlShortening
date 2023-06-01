@@ -1,10 +1,10 @@
+// importing express to create routers and middelwares
 const express = require('express');
-const router =express.Router();
-const{ createUrl, getUrl}=require("../controller/urlController")
-
-
-
-router.post('/url/shorten',createUrl)
-router.get('/:urlcode',getUrl)
-
+// creating router
+const router = express.Router();
+// importing route handlers
+const { createUrl, redirectUrl } = require("../controller/urlController")
+// calling APIs
+router.post('/url/shorten', createUrl)
+router.get('/:urlCode', redirectUrl)
 module.exports = router;
