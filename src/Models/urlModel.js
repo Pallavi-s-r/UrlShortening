@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const shortId = require('shortid')
+const shortId = require('shortid');
+
 const urlSchema = new mongoose.Schema({
     urlCode: {
         type: String,
